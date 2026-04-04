@@ -1,0 +1,432 @@
+===============================================================================
+                    PROMPT COMPLET - SITE WEB MIA LASHES
+                              VERSION 3.0
+                    (Avec Supabase + Vercel Blob)
+===============================================================================
+
+INFORMATIONS GENERALES
+------------------------------------------------------------------------------
+
+Nom du site: Mia Lashes
+Slogan: Cils de Qualite Premium
+Description: Mia Lashes est specialisee dans la mise en valeur du visage a travers 
+des prestations haut de gamme : extensions de cils, micropigmentation des sourcils 
+et soins du visage. Chaque detail est pense pour reveler une beaute naturelle, 
+elegante et maitrisee.
+
+Type: Institut de beaute specialise
+Telephone/WhatsApp: +225 0777812489
+Localisation: Mia Lash studio, Abidjan, Cote d'Ivoire
+Lien Google Maps: https://maps.app.goo.gl/umNXWPfz5vh1WYQ77
+Horaires: Lundi au Samedi 8h30 a 17h30 | Dimanche ferme
+
+Reseaux sociaux:
+- Instagram: https://www.instagram.com/mialashesci
+- Facebook: https://www.facebook.com/share/1AxcqEHiT6/
+- TikTok: https://www.tiktok.com/@mialash22
+
+===============================================================================
+OBJECTIFS DU SITE
+===============================================================================
+
+1. Presenter les prestations de beaute specialisees
+2. Permettre la reservation en ligne via formulaire + WhatsApp
+3. Vendre des produits professionnels pour cils
+4. Afficher la localisation via carte Google Maps integree
+5. Donner acces rapide aux reseaux sociaux
+6. Fournir un espace administrateur complet pour la gestion
+7. Stocker toutes les donnees dans une base de donnees (Supabase)
+8. Heberger les images sur un CDN (Vercel Blob)
+
+===============================================================================
+STYLE ET DESIGN
+===============================================================================
+
+PALETTE DE COULEURS EXACTE
+--------------------------
+Couleur principale: Blanc (#FFFFFF)
+Couleur secondaire: Noir (#000000)
+Couleur accent: Beige/Creme (#F5F5DC, #E8DCC4)
+Details: Dore (#D4AF37) - uniquement pour accents subtils
+
+UTILISATION DES COULEURS:
+- Background principal: Blanc
+- Texte principal: Noir
+- Sections alternees: Beige clair
+- Accents et bordures: Dore subtil
+- Footer: Noir avec texte blanc
+
+TYPOGRAPHIE
+-----------
+- Police titres: Playfair Display (serif) - elegante et raffinee
+- Police texte: Inter (sans-serif) - moderne et lisible
+
+IMAGES (IMPORTANT)
+------------------
+- Utiliser UNIQUEMENT des photos de personnes AFRO avec peau EBENE
+- Photos LUMINEUSES et bien eclairees (JAMAIS de photos sombres)
+- Ambiance moderne, elegante et professionnelle
+
+===============================================================================
+ARCHITECTURE TECHNIQUE (NOUVEAU)
+===============================================================================
+
+TECHNOLOGIES UTILISEES
+----------------------
+- Next.js 16 (App Router)
+- React 19.2
+- TypeScript
+- Tailwind CSS v4
+- shadcn/ui
+- Supabase (Base de donnees PostgreSQL)
+- Vercel Blob (Stockage images CDN)
+
+BASE DE DONNEES SUPABASE
+------------------------
+8 Tables principales:
+
+1. admin_users
+   - id (UUID, PRIMARY KEY)
+   - username (TEXT, UNIQUE)
+   - password (TEXT)
+   - role (TEXT: 'super_admin' ou 'admin')
+   - created_at (TIMESTAMP)
+
+2. categories
+   - id (UUID, PRIMARY KEY)
+   - name (TEXT)
+   - created_at (TIMESTAMP)
+
+3. products
+   - id (UUID, PRIMARY KEY)
+   - name (TEXT)
+   - description (TEXT)
+   - price (INTEGER)
+   - image (TEXT - URL Vercel Blob)
+   - category (TEXT)
+   - stock (INTEGER)
+   - created_at, updated_at (TIMESTAMP)
+
+4. services
+   - id (UUID, PRIMARY KEY)
+   - title (TEXT)
+   - description (TEXT)
+   - image (TEXT - URL Vercel Blob)
+   - price (TEXT)
+   - created_at, updated_at (TIMESTAMP)
+
+5. promotions
+   - id (UUID, PRIMARY KEY)
+   - title (TEXT)
+   - description (TEXT)
+   - badge (TEXT)
+   - image (TEXT - URL Vercel Blob, optionnel)
+   - active (BOOLEAN)
+   - created_at, updated_at (TIMESTAMP)
+
+6. about_content
+   - id (UUID, PRIMARY KEY)
+   - title, subtitle (TEXT)
+   - paragraph1, paragraph2, paragraph3 (TEXT)
+   - badge (TEXT)
+   - image (TEXT - URL Vercel Blob)
+   - updated_at (TIMESTAMP)
+
+7. hero_content
+   - id (UUID, PRIMARY KEY)
+   - title, subtitle (TEXT)
+   - image (TEXT - URL Vercel Blob)
+   - updated_at (TIMESTAMP)
+
+8. sales
+   - id (UUID, PRIMARY KEY)
+   - items (JSONB - liste des produits)
+   - total (INTEGER)
+   - client_name, client_phone (TEXT)
+   - payment_method (TEXT)
+   - created_by (TEXT - username admin)
+   - created_at (TIMESTAMP)
+
+STOCKAGE IMAGES - VERCEL BLOB
+-----------------------------
+- Toutes les images uploadees depuis l'admin sont stockees sur Vercel Blob
+- CDN global pour performance optimale
+- URLs permanentes et accessibles partout
+- Taille max: 5MB par image
+- Formats acceptes: JPG, PNG, WebP
+
+API Routes:
+- POST /api/upload - Upload d'image
+- DELETE /api/upload/delete - Suppression d'image
+
+===============================================================================
+STRUCTURE DU SITE
+===============================================================================
+
+1. HEADER (NAVIGATION)
+----------------------
+- Logo Mia Lashes cliquable
+- Menu: Services, Produits, Localisation
+- Icone panier avec compteur
+- Bouton "Reserver" avec formulaire modal
+- Numero WhatsApp visible
+- Menu mobile responsive
+
+2. HERO SECTION
+---------------
+- Grande image de fond (modifiable depuis admin)
+- Titre et sous-titre (modifiables depuis admin)
+- Bouton "Prendre rendez-vous" (formulaire modal)
+- Bouton "Decouvrir nos produits"
+
+3. CARROUSEL PROMOTIONS
+-----------------------
+- Defilement automatique
+- Gestion complete depuis admin
+- Support images personnalisees (1200x400px)
+
+4. SECTION A PROPOS
+-------------------
+- Contenu entierement modifiable depuis admin
+- Image principale modifiable
+- 4 valeurs cles avec icones
+
+5. SECTION SERVICES/PRESTATIONS
+-------------------------------
+3 Prestations par defaut:
+- Extensions de Cils (a partir de 30 000 FCFA)
+- Soins des Sourcils (a partir de 5 000 FCFA)
+- Soins du Visage (a partir de 15 000 FCFA)
+
+Formulaire de reservation:
+- Nom, Telephone, Date, Heure, Notes
+- Envoi automatique sur WhatsApp
+
+6. SECTION PRODUITS
+-------------------
+6 Produits reels Mia Lashes:
+- Colle (15 000 FCFA)
+- Bonder (10 000 FCFA)
+- Sealant (8 000 FCFA)
+- Serum (7 000 FCFA)
+- Shampooing (5 000 FCFA)
+- Remover (5 000 FCFA)
+
+7. SECTION LOCALISATION
+-----------------------
+- Adresse complete
+- Carte Google Maps integree
+- Horaires d'ouverture
+- Lien WhatsApp
+
+8. FOOTER
+---------
+- Logo et description
+- Liens rapides
+- Reseaux sociaux
+- Lien discret vers admin
+
+===============================================================================
+SYSTEME DE PANIER ET COMMANDE
+===============================================================================
+
+PROCESSUS:
+1. Ajout au panier (persistance localStorage)
+2. Page panier avec revision
+3. Formulaire livraison (Nom, Adresse, Telephone)
+4. Validation sur WhatsApp avec message formate
+
+===============================================================================
+ESPACE ADMINISTRATEUR COMPLET
+===============================================================================
+
+ACCES ADMIN
+-----------
+URL: /admin
+Super Admin: Mialashes / Mia@admin@4532
+
+SYSTEME MULTI-UTILISATEURS
+--------------------------
+- Super Admin: Acces complet + gestion utilisateurs + suppression ventes
+- Admin standard: Acces complet SAUF suppression ventes et gestion utilisateurs
+- Tracabilite: Chaque vente enregistre le nom de l'utilisateur
+
+10 ONGLETS ADMIN
+----------------
+
+1. VUE D'ENSEMBLE (Statistiques)
+   - Nombre produits
+   - Valeur stock
+   - Produits en rupture
+   - Alertes stock faible
+
+2. VENTES
+   - Enregistrement manuel des ventes
+   - Selection produit, quantite, client
+   - Mode de paiement
+   - Deduction automatique du stock
+   - Tracabilite utilisateur
+
+3. RAPPORTS
+   - Filtres par periode
+   - Revenu total, nombre ventes
+   - Meilleurs produits
+   - Meilleurs clients
+   - Export CSV
+
+4. ACCUEIL (Hero)
+   - Modifier image de fond
+   - Modifier titre et sous-titre
+
+5. A PROPOS
+   - Modifier tous les textes
+   - Changer l'image
+
+6. PRESTATIONS
+   - Ajouter/modifier/supprimer services
+   - Upload images
+
+7. PRODUITS
+   - CRUD complet
+   - Upload images depuis ordinateur
+   - Gestion stock
+
+8. CATEGORIES
+   - Creer categories personnalisees
+   - Modifier/Supprimer
+
+9. PROMOTIONS
+   - Gestion carrousel
+   - Upload images (1200x400px)
+
+10. UTILISATEURS (Super Admin uniquement)
+    - Creer nouveaux admins
+    - Definir username/password
+    - Supprimer utilisateurs
+
+===============================================================================
+VARIABLES D'ENVIRONNEMENT REQUISES
+===============================================================================
+
+Pour deployer sur Vercel, ces variables sont necessaires:
+
+NEXT_PUBLIC_SUPABASE_URL=https://xxxxx.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJxxxxx
+SUPABASE_SERVICE_ROLE_KEY=eyJxxxxx
+BLOB_READ_WRITE_TOKEN=vercel_blob_xxxxx
+
+===============================================================================
+FICHIERS PRINCIPAUX DU PROJET
+===============================================================================
+
+/app
+  /admin
+    page.tsx (Login admin)
+    /dashboard
+      page.tsx (Dashboard admin)
+  /api
+    /upload
+      route.ts (Upload Vercel Blob)
+      /delete
+        route.ts (Delete Vercel Blob)
+  /cart
+    page.tsx (Page panier)
+  page.tsx (Page principale)
+  layout.tsx (Layout global)
+  globals.css (Styles)
+  providers.tsx (Providers React)
+
+/components
+  header.tsx
+  hero.tsx
+  promo-carousel.tsx
+  about.tsx
+  services.tsx
+  products.tsx
+  location.tsx
+  footer.tsx
+  booking-dialog.tsx
+  /admin
+    dashboard-stats.tsx
+    products-management.tsx
+    categories-management.tsx
+    services-management.tsx
+    promos-management.tsx
+    about-management.tsx
+    hero-management.tsx
+    sales-management.tsx
+    reports-management.tsx
+    users-management.tsx
+  /ui (shadcn components)
+
+/lib
+  /supabase
+    client.ts (Client Supabase navigateur)
+    server.ts (Client Supabase serveur)
+    data-service.ts (Toutes les fonctions CRUD)
+  cart-context.tsx
+  utils.ts
+
+/hooks
+  use-image-upload.ts (Hook upload Vercel Blob)
+
+/public
+  logo.png
+  favicon.ico
+  (images produits et services)
+
+/scripts
+  001_create_tables.sql
+  002_recreate_tables.sql
+
+===============================================================================
+PROMPT DE CREATION FINAL
+===============================================================================
+
+Cree un site web professionnel complet pour "Mia Lashes", institut de beaute 
+specialise dans les extensions de cils a Abidjan, Cote d'Ivoire.
+
+INFORMATIONS:
+- Nom: Mia Lashes | Slogan: Cils de Qualite Premium
+- WhatsApp: +225 0777812489
+- Adresse: Mia Lash studio, Abidjan, Cote d'Ivoire
+- Horaires: Lundi-Samedi 8h30-17h30
+- Instagram: https://www.instagram.com/mialashesci
+- Facebook: https://www.facebook.com/share/1AxcqEHiT6/
+- TikTok: https://www.tiktok.com/@mialash22
+- Google Maps: https://maps.app.goo.gl/umNXWPfz5vh1WYQ77
+
+DESIGN:
+- Palette: Blanc, Noir, Beige/Creme, touches Dorees
+- Style: Epure, luxueux, elegant
+- Photos: Femmes africaines, peau ebene, photos lumineuses
+
+FONCTIONNALITES:
+1. Site vitrine avec Hero, A Propos, Services, Produits, Localisation
+2. Carrousel promotions automatique
+3. Systeme de reservation avec formulaire -> WhatsApp
+4. E-commerce: Panier + commande via WhatsApp
+5. Admin complet: Produits, Categories, Services, Promos, Ventes, Rapports
+6. Multi-utilisateurs avec Super Admin
+7. Export CSV des rapports
+
+TECHNIQUE:
+- Next.js 16 + TypeScript + Tailwind CSS + shadcn/ui
+- Supabase pour base de donnees PostgreSQL
+- Vercel Blob pour stockage images CDN
+- Responsive mobile-first
+
+ADMIN:
+- URL: /admin
+- Super Admin: Mialashes / Mia@admin@4532
+
+PRODUITS (6):
+- Colle 15000 FCFA, Bonder 10000, Sealant 8000, Serum 7000, Shampooing 5000, Remover 5000
+
+SERVICES (3):
+- Extensions de Cils (30000 FCFA), Soins Sourcils (5000), Soins Visage (15000)
+
+===============================================================================
+                              FIN DU DOCUMENT
+                              VERSION 3.0
+===============================================================================

@@ -1,0 +1,329 @@
+================================================================================
+                    GUIDE DE DEPLOIEMENT - MIA LASHES
+                    Site Web Salon de Beaute
+================================================================================
+
+Date de creation : Janvier 2026
+Version : 3.0 (avec Supabase + Vercel Blob)
+
+--------------------------------------------------------------------------------
+                         TABLE DES MATIERES
+--------------------------------------------------------------------------------
+
+1. PREREQUIS
+2. OPTION 1 : DEPLOIEMENT DIRECT DEPUIS V0 (Recommande)
+3. OPTION 2 : DEPLOIEMENT VIA GITHUB + VERCEL
+4. CONFIGURATION DES VARIABLES D'ENVIRONNEMENT
+5. VERIFICATION POST-DEPLOIEMENT
+6. ACCES A L'ADMINISTRATION
+7. GESTION DE LA BASE DE DONNEES
+8. DEPANNAGE
+9. CONTACTS ET LIENS UTILES
+
+================================================================================
+                           1. PREREQUIS
+================================================================================
+
+Avant de commencer, assurez-vous d'avoir :
+
+[ ] Un compte Vercel (gratuit) : https://vercel.com
+[ ] Un compte GitHub (gratuit) : https://github.com (si Option 2)
+[ ] Acces a votre projet v0 avec les integrations Supabase et Blob connectees
+
+Ce qui est deja configure pour vous :
+- Base de donnees Supabase avec toutes les tables
+- Donnees initiales (produits, services, categories, etc.)
+- Compte Super Admin
+- Stockage d'images Vercel Blob
+
+================================================================================
+              2. OPTION 1 : DEPLOIEMENT DIRECT DEPUIS V0
+                          (RECOMMANDE)
+================================================================================
+
+Cette option est la plus simple car toutes les variables d'environnement
+seront automatiquement configurees.
+
+ETAPE 1 : Ouvrir votre projet v0
+--------------------------------
+- Allez sur https://v0.dev
+- Ouvrez votre projet "Mia Lashes"
+
+ETAPE 2 : Publier le site
+-------------------------
+- Cliquez sur le bouton "Publish" en haut a droite
+- Suivez les instructions a l'ecran
+- Attendez que le deploiement soit termine (2-3 minutes)
+
+ETAPE 3 : Recuperer l'URL de votre site
+---------------------------------------
+- Une fois publie, vous recevrez une URL du type :
+  https://mia-lashes-xxxxx.vercel.app
+- C'est l'adresse de votre site en ligne
+
+ETAPE 4 : Configurer un domaine personnalise (Optionnel)
+--------------------------------------------------------
+- Dans Vercel, allez dans Settings > Domains
+- Ajoutez votre nom de domaine (ex: mialashes.com)
+- Suivez les instructions pour configurer les DNS
+
+================================================================================
+              3. OPTION 2 : DEPLOIEMENT VIA GITHUB + VERCEL
+================================================================================
+
+ETAPE 1 : Telecharger le code source
+------------------------------------
+- Dans v0, cliquez sur les 3 points en haut a droite
+- Selectionnez "Download ZIP"
+- Extrayez le fichier ZIP sur votre ordinateur
+
+ETAPE 2 : Creer un repository GitHub
+------------------------------------
+1. Allez sur https://github.com
+2. Cliquez sur "New repository" (bouton vert)
+3. Nom du repository : mia-lashes
+4. Laissez en "Public" ou "Private" selon votre choix
+5. Cliquez sur "Create repository"
+
+ETAPE 3 : Pousser le code sur GitHub
+------------------------------------
+Ouvrez un terminal/invite de commandes dans le dossier du projet extrait :
+
+    cd chemin/vers/mia-lashes
+    git init
+    git add .
+    git commit -m "Initial commit - Mia Lashes website"
+    git branch -M main
+    git remote add origin https://github.com/VOTRE_USERNAME/mia-lashes.git
+    git push -u origin main
+
+ETAPE 4 : Connecter a Vercel
+----------------------------
+1. Allez sur https://vercel.com
+2. Cliquez sur "Add New..." > "Project"
+3. Importez depuis GitHub
+4. Selectionnez le repository "mia-lashes"
+5. IMPORTANT : Avant de deployer, configurez les variables d'environnement
+   (voir section 4)
+6. Cliquez sur "Deploy"
+
+================================================================================
+            4. CONFIGURATION DES VARIABLES D'ENVIRONNEMENT
+================================================================================
+
+Si vous utilisez l'Option 2, vous devez configurer ces variables dans Vercel :
+
+Allez dans : Project Settings > Environment Variables
+
+VARIABLES SUPABASE (Base de donnees)
+------------------------------------
+Nom de la variable                  | Valeur (a copier depuis v0 > Vars)
+------------------------------------|------------------------------------
+NEXT_PUBLIC_SUPABASE_URL            | https://sfmgewrtkjaebybtyuun.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY       | [Votre cle publique]
+SUPABASE_SERVICE_ROLE_KEY           | [Votre cle service]
+
+VARIABLES VERCEL BLOB (Stockage images)
+---------------------------------------
+Nom de la variable                  | Valeur (a copier depuis v0 > Vars)
+------------------------------------|------------------------------------
+BLOB_READ_WRITE_TOKEN               | [Votre token]
+
+OU TROUVER CES VALEURS :
+------------------------
+1. Dans v0, cliquez sur l'icone de configuration dans la barre laterale gauche
+2. Allez dans la section "Vars"
+3. Copiez chaque valeur et collez-la dans Vercel
+
+================================================================================
+                    5. VERIFICATION POST-DEPLOIEMENT
+================================================================================
+
+Apres le deploiement, verifiez que tout fonctionne :
+
+[ ] 1. Page d'accueil
+    - Ouvrez l'URL de votre site
+    - Verifiez que l'image hero s'affiche
+    - Verifiez que le carrousel de promotions fonctionne
+
+[ ] 2. Section Services
+    - Les 3 services s'affichent avec leurs images
+    - Le bouton "Reserver" ouvre le formulaire
+    - Le formulaire envoie bien sur WhatsApp
+
+[ ] 3. Section Produits
+    - Les 6 produits s'affichent
+    - L'ajout au panier fonctionne
+    - Le panier affiche les produits
+
+[ ] 4. Administration
+    - Allez sur https://votre-site.vercel.app/admin
+    - Connectez-vous avec : Mialashes / Mia@admin@4532
+    - Verifiez que vous pouvez voir les produits
+    - Testez l'ajout d'un produit avec image
+
+[ ] 5. Test d'image
+    - Dans l'admin, modifiez un produit
+    - Uploadez une nouvelle image
+    - Verifiez que l'image s'affiche sur le site public
+
+================================================================================
+                      6. ACCES A L'ADMINISTRATION
+================================================================================
+
+URL ADMIN : https://votre-site.vercel.app/admin
+
+IDENTIFIANTS SUPER ADMIN :
+--------------------------
+Nom d'utilisateur : Mialashes
+Mot de passe      : Mia@admin@4532
+
+FONCTIONNALITES DISPONIBLES :
+-----------------------------
+
+1. VUE D'ENSEMBLE (Statistiques)
+   - Nombre de produits
+   - Valeur du stock
+   - Alertes stock faible
+
+2. VENTES
+   - Enregistrer une vente manuellement
+   - Ajouter client et mode de paiement
+   - Historique des ventes
+
+3. RAPPORTS
+   - Filtrer par periode
+   - Voir les meilleurs produits
+   - Voir les meilleurs clients
+   - Exporter en CSV
+
+4. ACCUEIL
+   - Modifier l'image de fond
+   - Modifier le titre et sous-titre
+
+5. A PROPOS
+   - Modifier l'image
+   - Modifier les textes
+
+6. PRESTATIONS
+   - Ajouter/modifier/supprimer des services
+   - Changer les images et prix
+
+7. PRODUITS
+   - Ajouter/modifier/supprimer des produits
+   - Gerer le stock
+   - Uploader des images
+
+8. CATEGORIES
+   - Creer de nouvelles categories
+
+9. PROMOS
+   - Creer des promotions
+   - Activer/desactiver
+   - Ajouter des images
+
+10. UTILISATEURS (Super Admin uniquement)
+    - Creer des comptes utilisateurs
+    - Gerer les droits d'acces
+
+================================================================================
+                   7. GESTION DE LA BASE DE DONNEES
+================================================================================
+
+CONNEXION DEPUIS UN SGBD LOCAL (pgAdmin, DBeaver, etc.)
+-------------------------------------------------------
+
+Parametres de connexion :
+- Host     : Voir variable POSTGRES_HOST dans v0 > Vars
+- Port     : 5432 (ou 6543 pour pooling)
+- Database : postgres
+- User     : Voir variable POSTGRES_USER
+- Password : Voir variable POSTGRES_PASSWORD
+
+Ou utilisez directement l'URL :
+- Copiez POSTGRES_URL depuis v0 > Vars
+- Collez dans votre SGBD
+
+TABLES DISPONIBLES :
+-------------------
+- admin_users    : Utilisateurs admin
+- categories     : Categories de produits
+- products       : Produits
+- services       : Prestations
+- promotions     : Promotions
+- about_content  : Contenu A Propos
+- hero_content   : Contenu page d'accueil
+- sales          : Ventes enregistrees
+
+================================================================================
+                          8. DEPANNAGE
+================================================================================
+
+PROBLEME : Les images ne s'affichent pas
+----------------------------------------
+Solution : 
+- Verifiez que BLOB_READ_WRITE_TOKEN est configure dans Vercel
+- Redeployez le site apres avoir ajoute la variable
+
+PROBLEME : Erreur de connexion a l'admin
+----------------------------------------
+Solution :
+- Verifiez les identifiants (attention aux majuscules)
+- Videz le cache du navigateur
+- Essayez en navigation privee
+
+PROBLEME : Les modifications admin ne s'affichent pas sur le site
+-----------------------------------------------------------------
+Solution :
+- Verifiez que les variables Supabase sont correctement configurees
+- Rafraichissez la page (Ctrl+F5)
+- Verifiez dans Supabase si les donnees sont bien enregistrees
+
+PROBLEME : Erreur 500 sur le site
+---------------------------------
+Solution :
+- Allez dans Vercel > Deployments > Logs
+- Identifiez l'erreur
+- Verifiez les variables d'environnement
+
+PROBLEME : Le formulaire WhatsApp ne fonctionne pas
+---------------------------------------------------
+Solution :
+- Verifiez que le numero est correct : +225 0777812489
+- Testez sur mobile (WhatsApp doit etre installe)
+
+================================================================================
+                      9. CONTACTS ET LIENS UTILES
+================================================================================
+
+LIENS DU SITE :
+- Site public    : [Votre URL Vercel]
+- Administration : [Votre URL Vercel]/admin
+
+RESEAUX SOCIAUX MIA LASHES :
+- Instagram : https://www.instagram.com/mialashesci
+- Facebook  : https://www.facebook.com/share/1AxcqEHiT6/
+- TikTok    : https://www.tiktok.com/@mialash22
+- WhatsApp  : +225 0777812489
+
+LOCALISATION :
+- Adresse   : Mia Lash studio, Abidjan, Cote d'Ivoire
+- Horaires  : Lundi au Samedi 8h30 - 17h30, Dimanche ferme
+- Google Maps : https://maps.app.goo.gl/umNXWPfz5vh1WYQ77
+
+SUPPORT TECHNIQUE :
+- Documentation Vercel : https://vercel.com/docs
+- Documentation Supabase : https://supabase.com/docs
+- Documentation Next.js : https://nextjs.org/docs
+
+================================================================================
+                         FIN DU GUIDE
+================================================================================
+
+Felicitations ! Votre site Mia Lashes est maintenant en ligne.
+
+Pour toute modification future du contenu (produits, services, promotions),
+utilisez l'interface d'administration a l'adresse :
+https://votre-site.vercel.app/admin
+
+================================================================================

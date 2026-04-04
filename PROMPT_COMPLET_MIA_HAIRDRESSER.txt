@@ -1,0 +1,859 @@
+═══════════════════════════════════════════════════════════════════════════════
+                    PROMPT COMPLET - SITE WEB MIA HAIRDRESSER
+═══════════════════════════════════════════════════════════════════════════════
+
+📋 INFORMATIONS GÉNÉRALES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Nom du site: Mia Hairdresser
+Type: Salon de beauté professionnel
+Téléphone/WhatsApp: +2250708985595
+Localisation: Abidjan, Côte d'Ivoire
+
+═══════════════════════════════════════════════════════════════════════════════
+🎯 OBJECTIFS DU SITE
+═══════════════════════════════════════════════════════════════════════════════
+
+1. Présenter les services du salon de manière professionnelle
+2. Permettre la réservation en ligne via WhatsApp
+3. Vendre des produits de beauté (cheveux et peau)
+4. Afficher la localisation via Google Maps intégré
+5. Donner accès rapide aux réseaux sociaux (Facebook, Instagram, TikTok, WhatsApp)
+
+═══════════════════════════════════════════════════════════════════════════════
+🎨 STYLE ET DESIGN
+═══════════════════════════════════════════════════════════════════════════════
+
+STYLE GÉNÉRAL
+──────────────
+- Professionnel comme les grandes marques de beauté
+- Dynamique avec des animations fluides qui retiennent l'attention
+- Engageant pour pousser les clients à acheter
+
+PALETTE DE COULEURS
+───────────────────
+- Couleurs élégantes et sophistiquées
+- Tons chauds et accueillants
+- Accent doré/bronze pour le luxe
+- Fond sombre professionnel
+
+TYPOGRAPHIE
+───────────
+- Police titres: Playfair Display (serif) - élégante et professionnelle
+- Police texte: Inter (sans-serif) - moderne et lisible
+
+ANIMATIONS
+──────────
+- Animations de défilement (fade-in, scale-in)
+- Effets de survol sur les images
+- Carrousel automatique pour les promotions
+- Transitions fluides entre les sections
+
+═══════════════════════════════════════════════════════════════════════════════
+📸 IMAGES ET VISUELS
+═══════════════════════════════════════════════════════════════════════════════
+
+REPRÉSENTATION (IMPORTANT)
+───────────────────────────
+- Utiliser UNIQUEMENT des photos de personnes afro avec peau ébène
+- Photos lumineuses et bien éclairées (PAS de photos sombres)
+- Ambiance moderne et professionnelle
+- Images de haute qualité
+- Éclairage naturel privilégié
+
+SECTIONS AVEC IMAGES
+─────────────────────
+1. Hero: Grand visuel du salon lumineux avec lumière naturelle
+2. À propos: Femme africaine élégante dans un salon moderne
+3. Services: 4 photos montrant chaque service (coupe, coloration, lissage, soins)
+4. Produits: Photos de produits de beauté professionnels
+
+═══════════════════════════════════════════════════════════════════════════════
+🏗️ STRUCTURE COMPLÈTE DU SITE
+═══════════════════════════════════════════════════════════════════════════════
+
+1. HEADER (NAVIGATION)
+──────────────────────
+- Logo "Mia Hairdresser"
+- Menu: Services, Produits, Localisation
+- Icône panier avec compteur d'articles
+- Bouton "Réserver" (lien WhatsApp)
+- Menu mobile responsive avec hamburger
+
+2. HERO SECTION
+───────────────
+- Grande image de fond lumineuse du salon
+- Titre principal: "Révélez votre beauté naturelle"
+- Sous-titre descriptif et engageant
+- 2 boutons d'action:
+  * "Prendre rendez-vous" (WhatsApp)
+  * "Découvrir nos produits"
+- Indicateur de défilement animé
+
+3. CARROUSEL DE PROMOTIONS
+───────────────────────────
+- Défilement automatique (toutes les 4 secondes)
+- 3 promotions:
+  
+  PROMOTION 1:
+  Titre: "20% DE RÉDUCTION"
+  Description: "Sur tous vos paiements via Wave"
+  Code: WAVE20
+  
+  PROMOTION 2:
+  Titre: "OFFRE DÉCOUVERTE"
+  Description: "Première visite au salon -15%"
+  Code: BIENVENUE
+  
+  PROMOTION 3:
+  Titre: "PACK BEAUTÉ"
+  Description: "Achetez 3 produits, le 4ème offert"
+  Code: 3+1
+
+- Navigation par points
+- Design accrocheur avec couleur accent
+
+4. SECTION À PROPOS
+───────────────────
+CONTENU:
+- Titre: "À Propos de Mia Hairdresser"
+- Texte de présentation du salon
+- Mission et valeurs
+- Badge: "5+ Années d'expérience"
+
+4 VALEURS CLÉS (avec icônes):
+1. Excellence (icône trophée)
+   - "Des services de qualité supérieure"
+2. Innovation (icône étoiles)
+   - "Techniques et produits de pointe"
+3. Passion (icône cœur)
+   - "L'amour de la beauté au quotidien"
+4. Proximité (icône utilisateurs)
+   - "Une relation de confiance avec nos clients"
+
+- Image: Femme africaine élégante dans un salon moderne
+- Animations: Fade-in au scroll
+
+5. SECTION SERVICES
+───────────────────
+4 SERVICES PRINCIPAUX (avec photos de femmes afro):
+
+SERVICE 1: COUPE & COIFFURE
+- Description: "Coupes modernes et classiques adaptées à votre style"
+- Prix: "À partir de 15 000 FCFA"
+- Photo: Femme africaine recevant une coupe professionnelle
+- Bouton: "Réserver" (WhatsApp)
+
+SERVICE 2: COLORATION
+- Description: "Colorations professionnelles et mèches premium"
+- Prix: "À partir de 25 000 FCFA"
+- Photo: Femme africaine avec coloration
+- Bouton: "Réserver" (WhatsApp)
+
+SERVICE 3: LISSAGE & DÉFRISAGE
+- Description: "Lissage brésilien en douceur"
+- Prix: "À partir de 30 000 FCFA"
+- Photo: Femme africaine avec cheveux lissés
+- Bouton: "Réserver" (WhatsApp)
+
+SERVICE 4: SOINS CAPILLAIRES
+- Description: "Soins profonds pour cheveux secs et abîmés"
+- Prix: "À partir de 20 000 FCFA"
+- Photo: Femme africaine recevant un soin
+- Bouton: "Réserver" (WhatsApp)
+
+FONCTIONNALITÉS:
+- Cartes avec effet de survol
+- Zoom léger sur images au survol
+- Icônes pour chaque service
+- Layout en grille responsive
+
+5. SERVICES (avec photos femmes afro lumineuses)
+   
+   Service 1: COUPE & COIFFURE
+   - Description: Coupes modernes et classiques
+   - Prix: À partir de 15 000 FCFA
+   - Bouton "Réserver" (WhatsApp)
+   
+   Service 2: COLORATION
+   - Description: Colorations professionnelles premium
+   - Prix: À partir de 25 000 FCFA
+   - Bouton "Réserver" (WhatsApp)
+   
+   Service 3: LISSAGE & DÉFRISAGE
+   - Description: Lissage brésilien en douceur
+   - Prix: À partir de 30 000 FCFA
+   - Bouton "Réserver" (WhatsApp)
+   
+   Service 4: SOINS CAPILLAIRES
+   - Description: Soins profonds pour cheveux abîmés
+   - Prix: À partir de 20 000 FCFA
+   - Bouton "Réserver" (WhatsApp)
+
+   IMPORTANT - RÉSERVATION:
+   Quand un client clique sur "Réserver", un formulaire modal s'ouvre avec:
+   - Nom complet (obligatoire)
+   - Numéro de téléphone (obligatoire)
+   - Date souhaitée (sélecteur de date)
+   - Heure souhaitée (sélecteur d'heure: 09:00-18:00)
+   - Notes additionnelles (optionnel, textarea)
+   
+   Après validation du formulaire, toutes les informations sont envoyées 
+   automatiquement sur WhatsApp (+2250708985595) avec format:
+   
+   📅 NOUVELLE RÉSERVATION - MIA HAIRDRESSER
+   
+   Service: [Nom du service]
+   Prix: [Prix du service]
+   
+   👤 Client: [Nom complet]
+   📞 Téléphone: [Numéro]
+   📅 Date: [Date sélectionnée]
+   🕐 Heure: [Heure sélectionnée]
+   📝 Notes: [Notes du client]
+   
+   Le formulaire doit être élégant et professionnel avec validation des champs.
+
+6. SECTION PRODUITS (E-COMMERCE)
+─────────────────────────────────
+6 PRODUITS DE BEAUTÉ PREMIUM:
+
+PRODUIT 1: Shampoing Hydratant Premium
+- Catégorie: Cheveux
+- Prix: 12 000 FCFA
+- Description: "Formule douce pour cheveux secs"
+
+PRODUIT 2: Masque Réparateur Intense
+- Catégorie: Cheveux
+- Prix: 15 000 FCFA
+- Description: "Répare les cheveux abîmés en profondeur"
+
+PRODUIT 3: Sérum Brillance
+- Catégorie: Cheveux
+- Prix: 18 000 FCFA
+- Description: "Pour des cheveux brillants et soyeux"
+
+PRODUIT 4: Huile de Coco Naturelle
+- Catégorie: Cheveux
+- Prix: 10 000 FCFA
+- Description: "100% naturelle, nourrit intensément"
+
+PRODUIT 5: Crème Hydratante Visage
+- Catégorie: Peau
+- Prix: 16 000 FCFA
+- Description: "Hydratation 24h pour peau éclatante"
+
+PRODUIT 6: Lait Corporel Nourrissant
+- Catégorie: Peau
+- Prix: 14 000 FCFA
+- Description: "Nourrit et adoucit la peau"
+
+FONCTIONNALITÉS PAR PRODUIT:
+- Image du produit
+- Badge catégorie (Cheveux/Peau)
+- Nom et description
+- Prix en FCFA
+- Sélecteur de quantité (+/- buttons)
+- Bouton "Ajouter au panier"
+- Animation au hover
+
+7. SECTION LOCALISATION
+───────────────────────
+INFORMATIONS DE CONTACT:
+- Adresse: Abidjan, Côte d'Ivoire
+- Téléphone/WhatsApp: +225 07 08 98 55 95
+- Email: contact@miahairdresser.com
+
+HORAIRES D'OUVERTURE:
+- Lundi - Samedi: 9h00 - 19h00
+- Dimanche: Sur rendez-vous uniquement
+
+CARTE GOOGLE MAPS:
+- Iframe intégré
+- Hauteur: 500px
+- Responsive
+- Centrée sur Abidjan
+
+8. FOOTER
+─────────
+3 COLONNES:
+
+COLONNE 1: À Propos
+- Nom du salon
+- Description courte
+- Slogan
+
+COLONNE 2: Liens Rapides
+- Services
+- Produits
+- Localisation
+- Contact
+
+COLONNE 3: Suivez-nous
+- Facebook (icône + lien)
+- Instagram (icône + lien)
+- TikTok (icône + lien)
+- WhatsApp (icône + lien)
+
+- Copyright: © 2025 Mia Hairdresser. Tous droits réservés.
+
+═══════════════════════════════════════════════════════════════════════════════
+🛒 SYSTÈME DE PANIER ET COMMANDE
+═══════════════════════════════════════════════════════════════════════════════
+
+FONCTIONNEMENT DU PANIER
+─────────────────────────
+- Contexte React global (CartContext)
+- Sauvegarde automatique dans localStorage
+- Persistance même après fermeture du navigateur
+- Compteur d'articles visible dans le header
+- Badge avec nombre total d'articles
+
+PROCESSUS DE COMMANDE (3 ÉTAPES)
+─────────────────────────────────
+
+ÉTAPE 1: RÉVISION DU PANIER
+─────────────────────────────
+Page dédiée affichant:
+- Liste complète des produits ajoutés
+- Image miniature de chaque produit
+- Nom du produit
+- Prix unitaire
+- Ajusteur de quantité (+/- buttons)
+- Bouton de suppression (icône poubelle)
+- Sous-total par produit
+- Total général de la commande
+- Bouton "Passer la commande"
+
+Si panier vide:
+- Message: "Votre panier est vide"
+- Bouton "Découvrir nos produits"
+
+ÉTAPE 2: FORMULAIRE DE LIVRAISON
+─────────────────────────────────
+Affichage du formulaire avec 3 champs OBLIGATOIRES:
+
+CHAMP 1: Nom complet
+- Type: Input texte
+- Placeholder: "Votre nom complet"
+- Validation: Requis
+
+CHAMP 2: Adresse de livraison
+- Type: Textarea
+- Placeholder: "Quartier, rue, repères..."
+- Validation: Requis
+- Lignes: 3
+
+CHAMP 3: Numéro de téléphone
+- Type: Input tel
+- Placeholder: "+225 XX XX XX XX XX"
+- Validation: Requis
+
+Tous les champs doivent être remplis pour continuer.
+
+ÉTAPE 3: VALIDATION SUR WHATSAPP
+─────────────────────────────────
+- Bouton principal: "Valider sur WhatsApp"
+- Couleur: Vert WhatsApp
+- Icône: Logo WhatsApp
+
+AU CLIC:
+1. Génération automatique d'un message formaté
+2. Ouverture de WhatsApp avec le message pré-rempli
+3. Message envoyé au numéro: +2250708985595
+
+FORMAT DU MESSAGE WHATSAPP:
+────────────────────────────
+🛍️ NOUVELLE COMMANDE - MIA HAIRDRESSER
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📦 PRODUITS COMMANDÉS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• [Nom du produit 1]
+  Quantité: [X]
+  Prix unitaire: [XXX] FCFA
+  Sous-total: [XXX] FCFA
+
+• [Nom du produit 2]
+  Quantité: [X]
+  Prix unitaire: [XXX] FCFA
+  Sous-total: [XXX] FCFA
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+💰 TOTAL: [XXX] FCFA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📍 INFORMATIONS DE LIVRAISON:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+👤 Nom: [Nom du client]
+📍 Adresse: [Adresse complète]
+📞 Téléphone: [Numéro]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Merci pour votre commande ! 🎉
+
+APRÈS ENVOI:
+- Affichage d'un message de confirmation
+- Vidage automatique du panier
+- Redirection vers la page d'accueil après 3 secondes
+
+═══════════════════════════════════════════════════════════════════════════════
+💳 MOYENS DE PAIEMENT
+═══════════════════════════════════════════════════════════════════════════════
+
+VALIDATION DE COMMANDE:
+1. Client remplit le formulaire de livraison
+2. Toutes les informations sont envoyées sur WhatsApp
+3. Le salon contacte le client pour confirmer le mode de paiement
+
+OPTIONS DE PAIEMENT DISPONIBLES:
+- WhatsApp: Contact direct avec le salon
+- Wave: 20% de réduction (promotion mentionnée dans le carrousel)
+
+Note: Le paiement n'est pas traité directement sur le site. 
+Le salon gère les paiements via WhatsApp ou Wave après confirmation de la commande.
+
+═══════════════════════════════════════════════════════════════════════════════
+🛠️ TECHNOLOGIES UTILISÉES
+═══════════════════════════════════════════════════════════════════════════════
+
+FRAMEWORK ET BIBLIOTHÈQUES
+───────────────────────────
+- Next.js 16 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- shadcn/ui (composants UI)
+
+FONCTIONNALITÉS TECHNIQUES
+────────────────────────────
+- Responsive design (mobile-first)
+- Animations CSS personnalisées
+- Context API pour la gestion du panier
+- localStorage pour la persistance des données
+- Google Maps iframe intégré
+- WhatsApp Business API integration
+- SEO optimisé (métadonnées complètes)
+- Vercel Analytics
+- Images optimisées avec Next.js Image
+
+COMPOSANTS UI UTILISÉS
+───────────────────────
+- Button
+- Card
+- Badge
+- Input
+- Textarea
+- Dialog
+- Sheet
+- Separator
+- Icons (Lucide React)
+
+═══════════════════════════════════════════════════════════════════════════════
+📱 RESPONSIVE DESIGN
+═══════════════════════════════════════════════════════════════════════════════
+
+BREAKPOINTS
+───────────
+- Mobile: < 768px
+- Tablet: 768px - 1024px
+- Desktop: > 1024px
+
+ADAPTATIONS MOBILE
+──────────────────
+- Menu hamburger avec animation
+- Grille de produits: 1 colonne sur mobile, 2 sur tablet, 3 sur desktop
+- Services: 1 colonne sur mobile, 2 sur tablet, 4 sur desktop
+- Carrousel tactile avec swipe
+- Cartes empilées verticalement
+- Footer: colonnes empilées sur mobile
+- Textes adaptés (tailles réduites)
+- Espacements ajustés
+- Images responsive
+
+TOUCH GESTURES
+──────────────
+- Swipe pour le carrousel
+- Tap pour les boutons
+- Scroll fluide
+- Menu slide-in
+
+═══════════════════════════════════════════════════════════════════════════════
+🎯 APPELS À L'ACTION (CTA)
+═══════════════════════════════════════════════════════════════════════════════
+
+PRINCIPAUX CTA
+──────────────
+1. "Prendre rendez-vous" (Hero) → WhatsApp
+2. "Découvrir nos produits" (Hero) → Scroll vers produits
+3. "Réserver" (Services) → WhatsApp avec service pré-sélectionné
+4. "Ajouter au panier" (Produits) → Ajout au panier
+5. "Voir le panier" (Header) → Page panier
+6. "Passer la commande" (Panier) → Formulaire de livraison
+7. "Valider sur WhatsApp" (Checkout) → Envoi commande WhatsApp
+
+COULEURS DES BOUTONS
+─────────────────────
+- Primaire: Accent doré/bronze (#D4AF37)
+- Secondaire: Transparent avec bordure
+- WhatsApp: Vert (#25D366)
+- Hover: Opacité 90% + légère élévation
+- Active: Scale 95%
+
+ANIMATIONS DES BOUTONS
+──────────────────────
+- Hover: Scale 105% + shadow
+- Click: Scale 95%
+- Transition: 200ms ease
+
+═══════════════════════════════════════════════════════════════════════════════
+✅ CHECKLIST COMPLÈTE DES FONCTIONNALITÉS
+═══════════════════════════════════════════════════════════════════════════════
+
+NAVIGATION & HEADER
+───────────────────
+✓ Logo cliquable retour accueil
+✓ Menu de navigation fixe
+✓ Effet au scroll (background opaque)
+✓ Compteur panier dynamique
+✓ Bouton réservation WhatsApp
+✓ Menu mobile hamburger
+✓ Scroll smooth vers sections
+
+HERO SECTION
+────────────
+✓ Image de fond responsive
+✓ Overlay sombre pour lisibilité
+✓ Titre et sous-titre animés
+✓ 2 CTA avec actions différentes
+✓ Indicateur de scroll animé
+
+CARROUSEL PROMOTIONS
+────────────────────
+✓ Défilement automatique 4s
+✓ 3 promotions configurées
+✓ Navigation par points
+✓ Pause au hover
+✓ Responsive mobile
+
+SECTION À PROPOS
+────────────────
+✓ Présentation du salon
+✓ Badge expérience
+✓ 4 valeurs avec icônes
+✓ Image femme africaine lumineuse
+✓ Animations fade-in
+
+SECTION SERVICES
+────────────────
+✓ 4 services avec détails
+✓ Photos femmes afro lumineuses
+✓ Prix affichés
+✓ Boutons réservation WhatsApp
+✓ Cartes avec hover effects
+✓ Layout responsive
+
+SECTION PRODUITS
+────────────────
+✓ 6 produits configurés
+✓ Images de qualité
+✓ Badges catégories
+✓ Sélecteur de quantité
+✓ Ajout au panier
+✓ Animations hover
+✓ Grid responsive
+
+SYSTÈME PANIER
+──────────────
+✓ Context React global
+✓ localStorage persistance
+✓ Ajout produits
+✓ Modification quantité
+✓ Suppression produits
+✓ Calcul total automatique
+✓ Compteur header
+✓ Page panier dédiée
+
+PROCESSUS COMMANDE
+──────────────────
+✓ Révision du panier
+✓ Formulaire livraison
+✓ Validation champs obligatoires
+✓ Génération message WhatsApp
+✓ Formatage automatique
+✓ Envoi vers +2250708985595
+✓ Confirmation visuelle
+✓ Vidage panier après envoi
+
+LOCALISATION
+────────────
+✓ Adresse affichée
+✓ Téléphone cliquable
+✓ Horaires d'ouverture
+✓ Google Maps intégré
+✓ Responsive iframe
+
+FOOTER
+──────
+✓ 3 colonnes organisées
+✓ Liens rapides fonctionnels
+✓ Icônes réseaux sociaux
+✓ Liens vers Facebook, Instagram, TikTok, WhatsApp
+✓ Copyright dynamique
+✓ Responsive mobile
+
+DESIGN & UX
+───────────
+✓ Photos personnes afro
+✓ Éclairage lumineux
+✓ Palette cohérente
+✓ Typographie élégante
+✓ Animations fluides
+✓ Hover effects
+✓ Loading states
+✓ Transitions douces
+
+TECHNIQUE
+─────────
+✓ Next.js 16 App Router
+✓ TypeScript
+✓ Tailwind CSS v4
+✓ SEO optimisé
+✓ Images optimisées
+✓ Performance optimale
+✓ Accessibilité
+✓ Mobile-first
+
+═══════════════════════════════════════════════════════════════════════════════
+🌍 LANGUE ET LOCALISATION
+═══════════════════════════════════════════════════════════════════════════════
+
+LANGUE: Français
+DEVISE: FCFA (Franc CFA)
+FORMAT TÉLÉPHONE: +225 XX XX XX XX XX
+FUSEAU HORAIRE: GMT (Abidjan)
+PAYS: Côte d'Ivoire
+VILLE: Abidjan
+
+═══════════════════════════════════════════════════════════════════════════════
+📝 NOTES IMPORTANTES
+═══════════════════════════════════════════════════════════════════════════════
+
+1. PHOTOS
+   - TOUJOURS utiliser des photos de personnes afro avec peau ébène
+   - Photos LUMINEUSES avec éclairage naturel
+   - PAS de photos sombres
+   - Ambiance professionnelle et moderne
+
+2. WHATSAPP
+   - Toutes les réservations passent par WhatsApp
+   - Toutes les commandes sont envoyées sur WhatsApp
+   - Numéro: +2250708985595
+   - Messages formatés automatiquement
+
+3. PROMOTIONS
+   - Carrousel visible et accrocheur
+   - 20% réduction Wave
+   - Autres offres attractives
+   - Codes promo affichés
+
+4. PANIER
+   - Doit être persistant (localStorage)
+   - Fonctionne même après fermeture navigateur
+   - Compteur visible en permanence
+   - Processus simple et clair
+
+5. MOBILE
+   - Site parfaitement fonctionnel sur mobile
+   - Menu hamburger fluide
+   - Touch gestures
+   - Layout adaptatif
+
+6. ANIMATIONS
+   - Fluides et professionnelles
+   - Pas trop excessives
+   - Améliorent l'expérience
+   - Performance optimale
+
+7. PERFORMANCE
+   - Images optimisées
+   - Chargement rapide
+   - Code minifié
+   - SEO optimisé
+
+═══════════════════════════════════════════════════════════════════════════════
+🚀 PROMPT DE CRÉATION COMPLET (COPIER-COLLER)
+═══════════════════════════════════════════════════════════════════════════════
+
+Crée un site web professionnel pour "Mia Hairdresser", un salon de beauté à Abidjan, Côte d'Ivoire.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+INFORMATIONS DE BASE:
+- Nom: Mia Hairdresser
+- Téléphone/WhatsApp: +2250708985595
+- Type: Salon de beauté professionnel
+- Localisation: Abidjan, Côte d'Ivoire
+- Public cible: Clientèle africaine
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OBJECTIFS:
+1. Présenter les services du salon
+2. Permettre la réservation en ligne via WhatsApp
+3. Vendre des produits beauté (cheveux et peau)
+4. Afficher la localisation via Google Maps
+5. Accès rapide aux réseaux sociaux: Facebook, Instagram, TikTok, WhatsApp
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DESIGN ET STYLE:
+- Style professionnel comme les grandes marques de beauté (Sephora, L'Oréal)
+- Dynamique avec animations fluides qui retiennent l'attention
+- Palette élégante: tons chauds, accent doré/bronze, fond sophistiqué
+- Polices: Playfair Display (titres) + Inter (texte)
+
+IMPORTANT - VISUELS:
+- Utiliser UNIQUEMENT des photos de personnes AFRO avec peau ÉBÈNE
+- Photos LUMINEUSES avec éclairage NATUREL (PAS de photos sombres)
+- Ambiance moderne et professionnelle
+- Images de haute qualité
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STRUCTURE DU SITE:
+
+1. HEADER
+   - Logo "Mia Hairdresser"
+   - Navigation: Services, Produits, Localisation
+   - Icône panier avec compteur
+   - Bouton "Réserver" (WhatsApp)
+   - Menu mobile hamburger
+
+2. HERO
+   - Grande image lumineuse du salon avec éclairage naturel
+   - Titre: "Révélez votre beauté naturelle"
+   - Sous-titre engageant
+   - 2 CTA: "Prendre rendez-vous" (WhatsApp) + "Découvrir nos produits"
+   - Indicateur de scroll
+
+3. CARROUSEL PROMOTIONS (défilement auto 4s)
+   Promotion 1: "20% DE RÉDUCTION - Sur paiements Wave (code: WAVE20)"
+   Promotion 2: "OFFRE DÉCOUVERTE - Première visite -15% (code: BIENVENUE)"
+   Promotion 3: "PACK BEAUTÉ - Achetez 3, le 4ème offert (code: 3+1)"
+
+4. À PROPOS
+   - Titre: "À Propos de Mia Hairdresser"
+   - Présentation du salon
+   - Badge: "5+ années d'expérience"
+   - 4 valeurs avec icônes:
+     * Excellence (trophée) - Services de qualité supérieure
+     * Innovation (étoiles) - Techniques de pointe
+     * Passion (cœur) - Amour de la beauté
+     * Proximité (utilisateurs) - Relation de confiance
+   - Photo: Femme africaine élégante
+
+5. SERVICES (avec photos femmes afro lumineuses)
+   
+   Service 1: COUPE & COIFFURE
+   - Description: Coupes modernes et classiques
+   - Prix: À partir de 15 000 FCFA
+   - Bouton "Réserver" (WhatsApp)
+   
+   Service 2: COLORATION
+   - Description: Colorations professionnelles premium
+   - Prix: À partir de 25 000 FCFA
+   - Bouton "Réserver" (WhatsApp)
+   
+   Service 3: LISSAGE & DÉFRISAGE
+   - Description: Lissage brésilien en douceur
+   - Prix: À partir de 30 000 FCFA
+   - Bouton "Réserver" (WhatsApp)
+   
+   Service 4: SOINS CAPILLAIRES
+   - Description: Soins profonds cheveux abîmés
+   - Prix: À partir de 20 000 FCFA
+   - Bouton "Réserver" (WhatsApp)
+
+   IMPORTANT - RÉSERVATION:
+   Quand un client clique sur "Réserver", un formulaire modal s'ouvre avec:
+   - Nom complet (obligatoire)
+   - Numéro de téléphone (obligatoire)
+   - Date souhaitée (sélecteur de date)
+   - Heure souhaitée (sélecteur d'heure: 09:00-18:00)
+   - Notes additionnelles (optionnel, textarea)
+   
+   Après validation du formulaire, toutes les informations sont envoyées 
+   automatiquement sur WhatsApp (+2250708985595) avec format:
+   
+   📅 NOUVELLE RÉSERVATION - MIA HAIRDRESSER
+   
+   Service: [Nom du service]
+   Prix: [Prix du service]
+   
+   👤 Client: [Nom complet]
+   📞 Téléphone: [Numéro]
+   📅 Date: [Date sélectionnée]
+   🕐 Heure: [Heure sélectionnée]
+   📝 Notes: [Notes du client]
+   
+   Le formulaire doit être élégant et professionnel avec validation des champs.
+
+6. PRODUITS E-COMMERCE
+   
+   Produit 1: Shampoing Hydratant Premium (Cheveux) - 12 000 FCFA
+   Produit 2: Masque Réparateur Intense (Cheveux) - 15 000 FCFA
+   Produit 3: Sérum Brillance (Cheveux) - 18 000 FCFA
+   Produit 4: Huile de Coco Naturelle (Cheveux) - 10 000 FCFA
+   Produit 5: Crème Hydratante Visage (Peau) - 16 000 FCFA
+   Produit 6: Lait Corporel Nourrissant (Peau) - 14 000 FCFA
+   
+   Chaque produit a:
+   - Image
+   - Badge catégorie
+   - Description
+   - Prix FCFA
+   - Sélecteur quantité (+/-)
+   - Bouton "Ajouter au panier"
+
+7. LOCALISATION
+   - Adresse: Abidjan, Côte d'Ivoire
+   - Téléphone: +225 07 08 98 55 95
+   - Horaires: Lun-Sam 9h-19h, Dim sur RDV
+   - Google Maps intégré (iframe 500px)
+
+8. FOOTER
+   Colonne 1: À propos (description)
+   Colonne 2: Liens rapides (Services, Produits, Localisation)
+   Colonne 3: Réseaux sociaux (Facebook, Instagram, TikTok, WhatsApp)
+   Copyright: © 2025 Mia Hairdresser
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SYSTÈME PANIER & COMMANDE (3 ÉTAPES):
+
+ÉTAPE 1: PAGE PANIER
+- Liste des produits ajoutés
+- Image + nom + prix
+- Ajusteur quantité (+/-)
+- Bouton suppression
+- Total général
+- Bouton "Passer la commande"
+
+ÉTAPE 2: FORMULAIRE LIVRAISON (OBLIGATOIRE)
+Champs requis:
+1. Nom complet (input)
+2. Adresse de livraison complète (textarea)
+3. Numéro de téléphone (input tel)
+
+ÉTAPE 3: VALIDATION WHATSAPP
+- Bouton "Valider sur WhatsApp" (vert)
+- Message auto-formaté avec:
+  * Liste produits + quantités
+  * Total
+  * Infos livraison (nom, adresse, téléphone)
+- Envoi vers +2250708985595
+- Confirmation + vidage panier
+
+FORMAT MESSAGE WHATSAPP:
