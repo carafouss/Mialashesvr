@@ -360,6 +360,160 @@ export async function updateHeroContent(content: Partial<HeroContent>): Promise<
   }
 }
 
+// ============ GALLERY ============
+export interface GalleryItem {
+  id: string
+  title: string
+  description: string
+  media_url: string
+  media_type: "image" | "video"
+  thumbnail_url: string
+  category: string
+  display_order: number
+  is_visible: boolean
+  created_at: string
+  updated_at: string
+}
+
+export async function getGalleryItems(): Promise<GalleryItem[]> {
+  const supabase = getSupabaseClient()
+  const { data, error } = await supabase
+    .from("gallery")
+    .select("*")
+    .eq("is_visible", true)
+    .order("display_order", { ascending: true })
+  if (error) {
+    console.error("Error fetching gallery:", error)
+    return []
+  }
+  return data || []
+}
+
+export async function getGalleryItemsByCategory(category: string): Promise<GalleryItem[]> {
+  const supabase = getSupabaseClient()
+  const { data, error } = await supabase
+    .from("gallery")
+    .select("*")
+    .eq("is_visible", true)
+    .eq("category", category)
+    .order("display_order", { ascending: true })
+  if (error) {
+    console.error("Error fetching gallery by category:", error)
+    return []
+  }
+  return data || []
+}
+
+export async function createGalleryItem(item: Omit<GalleryItem, "id" | "created_at" | "updated_at">): Promise<GalleryItem | null> {
+  const supabase = getSupabaseClient()
+  const { data, error } = await supabase.from("gallery").insert([item]).select().single()
+  if (error) {
+    console.error("Error creating gallery item:", error)
+    return null
+  }
+  return data
+}
+
+export async function updateGalleryItem(id: string, item: Partial<GalleryItem>): Promise<GalleryItem | null> {
+  const supabase = getSupabaseClient()
+  const { data, error } = await supabase
+    .from("gallery")
+    .update({ ...item, updated_at: new Date().toISOString() })
+    .eq("id", id)
+    .select()
+    .single()
+  if (error) {
+    console.error("Error updating gallery item:", error)
+    return null
+  }
+  return data
+}
+
+export async function deleteGalleryItem(id: string): Promise<boolean> {
+  const supabase = getSupabaseClient()
+  const { error } = await supabase.from("gallery").delete().eq("id", id)
+  if (error) {
+    console.error("Error deleting gallery item:", error)
+    return false
+  }
+  return true
+}
+
+// ============ PROMO VIDEO ============
+export interface PromoVideo {
+  id: string
+  title: string
+  video_url: string
+  thumbnail_url: string
+  is_active: boolean
+  created_at: string
+  updated_at: string
+}
+
+export async function getPromoVideo(): Promise<PromoVideo | null> {
+  const supabase = getSupabaseClient()
+  const { data, error } = await supabase
+    .from("promo_video")
+    .select("*")
+    .eq("is_active", true)
+    .single()
+  if (error) {
+    console.error("Error fetching promo video:", error)
+    return null
+  }
+  return data
+}
+
+export async function updatePromoVideo(content: Partial<PromoVideo>): Promise<PromoVideo | null> {
+  const supabase = getSupabaseClient()
+  const { data: existing } = await supabase.from("promo_video").select("id").single()
+  
+  if (existing) {
+    const { data, error } = await supabase
+      .from("promo_video")
+      .update({ ...content, updated_at: new Date().toISOString() })
+      .eq("id", existing.id)
+      .select()
+      .single()
+    if (error) {
+      console.error("Error updating promo video:", error)
+      return null
+    }
+    return data
+  }
+  return null
+}
+
+// ============ SERVICE BY ID ============
+export async function getServiceById(id: string): Promise<Service | null> {
+  const supabase = getSupabaseClient()
+  const { data, error } = await supabase
+    .from("services")
+    .select("*")
+    .or(`id.eq.${id},slug.eq.${id}`)
+    .single()
+  if (error) {
+    console.error("Error fetching service:", error)
+    return null
+  }
+  return data
+}
+
+// ============ PRODUCT BY ID ============
+export async function getProductById(id: string): Promise<Product | null> {
+  const supabase = getSupabaseClient()
+  const { data, error } = await supabase
+    .from("products")
+    .select("*")
+    .or(`id.eq.${id},slug.eq.${id}`)
+    .single()
+  if (error) {
+    console.error("Error fetching product:", error)
+    return null
+  }
+  return data
+}
+
 // ============ SALES ============
 export interface SaleItem {
   product_id: string

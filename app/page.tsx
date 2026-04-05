@@ -1,10 +1,9 @@
 import Header from "@/components/header"
 import Hero from "@/components/hero"
 import PromoCarousel from "@/components/promo-carousel"
+import PromoVideo from "@/components/promo-video"
 import About from "@/components/about"
-import Services from "@/components/services"
-import Products from "@/components/products"
-import Location from "@/components/location"
+import ServicesPreview from "@/components/services-preview"
 import Footer from "@/components/footer"
 
 export default function Home() {
@@ -13,10 +12,9 @@ export default function Home() {
       <Header />
       <Hero />
       <PromoCarousel />
+      <PromoVideo />
       <About />
-      <Services />
-      <Products />
-      <Location />
+      <ServicesPreview />
       <Footer />
     </main>
   )

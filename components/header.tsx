@@ -37,13 +37,16 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link href="#services" className="text-sm font-medium hover:text-accent transition-colors">
+            <Link href="/services" className="text-sm font-medium hover:text-accent transition-colors">
               Services
             </Link>
-            <Link href="#products" className="text-sm font-medium hover:text-accent transition-colors">
+            <Link href="/produits" className="text-sm font-medium hover:text-accent transition-colors">
               Produits
             </Link>
-            <Link href="#location" className="text-sm font-medium hover:text-accent transition-colors">
+            <Link href="/galerie" className="text-sm font-medium hover:text-accent transition-colors">
+              Galerie
+            </Link>
+            <Link href="/localisation" className="text-sm font-medium hover:text-accent transition-colors">
               Localisation
             </Link>
             <Link href="/cart" className="relative">
@@ -86,21 +89,28 @@ export default function Header() {
         {isMobileMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 flex flex-col gap-4 animate-fade-in-up">
             <Link
-              href="#services"
+              href="/services"
               className="text-sm font-medium hover:text-accent transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Services
             </Link>
             <Link
-              href="#products"
+              href="/produits"
               className="text-sm font-medium hover:text-accent transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Produits
             </Link>
             <Link
-              href="#location"
+              href="/galerie"
+              className="text-sm font-medium hover:text-accent transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Galerie
+            </Link>
+            <Link
+              href="/localisation"
               className="text-sm font-medium hover:text-accent transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
