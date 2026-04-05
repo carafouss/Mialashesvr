@@ -15,7 +15,11 @@ export default function About() {
   const loadAboutData = async () => {
     setLoading(true)
     try {
-      const data = await getAboutContent()
+      // Add timeout to prevent infinite loading
+      const timeoutPromise = new Promise<null>((_, reject) => 
+        setTimeout(() => reject(new Error('Timeout')), 5000)
+      )
+      const data = await Promise.race([getAboutContent(), timeoutPromise])
       setAboutData(data || {
         id: "",
         image: "",
@@ -29,6 +33,18 @@ export default function About() {
       })
     } catch (error) {
       console.error("Error loading about data:", error)
+      // Set default data on error
+      setAboutData({
+        id: "",
+        image: "",
+        title: "Notre Philosophie",
+        subtitle: "L'excellence au service de votre beauté",
+        paragraph1: "Mia Lashes est née d'une passion pour la beauté et l'art de sublimer le regard.",
+        paragraph2: "Notre équipe de professionnelles certifiées vous accueille dans un cadre élégant et apaisant.",
+        paragraph3: "Nous utilisons exclusivement des produits haut de gamme pour garantir des résultats exceptionnels.",
+        badge_text: "Expert en extensions de cils",
+        updated_at: "",
+      })
     } finally {
       setLoading(false)
     }

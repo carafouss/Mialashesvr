@@ -16,15 +16,35 @@ export default function Hero() {
   }, [])
 
   const loadHeroData = async () => {
-    const data = await getHeroContent()
-    setHeroData(data || {
-      id: "",
-      image: "",
-      images: [],
-      title: "L'art de sublimer votre regard",
-      subtitle: "Extensions de cils, micropigmentation des sourcils et soins beauté personnalisés",
-      updated_at: "",
-    })
+    try {
+      // Add timeout to prevent infinite loading
+      const timeoutPromise = new Promise<null>((_, reject) => 
+        setTimeout(() => reject(new Error('Timeout')), 5000)
+      )
+      
+      const dataPromise = getHeroContent()
+      const data = await Promise.race([dataPromise, timeoutPromise])
+      
+      setHeroData(data || {
+        id: "",
+        image: "",
+        images: [],
+        title: "L'art de sublimer votre regard",
+        subtitle: "Extensions de cils, micropigmentation des sourcils et soins beauté personnalisés",
+        updated_at: "",
+      })
+    } catch (error) {
+      console.error("Error loading hero content:", error)
+      // Set default data on error
+      setHeroData({
+        id: "",
+        image: "",
+        images: [],
+        title: "L'art de sublimer votre regard",
+        subtitle: "Extensions de cils, micropigmentation des sourcils et soins beauté personnalisés",
+        updated_at: "",
+      })
+    }
   }
 
   // Get all images (combine main image with images array)
