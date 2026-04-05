@@ -22,19 +22,24 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Liens Rapides</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#services" className="text-primary-foreground/80 hover:text-accent transition-colors">
+                <Link href="/services" className="text-primary-foreground/80 hover:text-accent transition-colors">
                   Nos Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#products" className="text-primary-foreground/80 hover:text-accent transition-colors">
+                <Link href="/produits" className="text-primary-foreground/80 hover:text-accent transition-colors">
                   Nos Produits
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#location" className="text-primary-foreground/80 hover:text-accent transition-colors">
+                <Link href="/galerie" className="text-primary-foreground/80 hover:text-accent transition-colors">
+                  Galerie
+                </Link>
+              </li>
+              <li>
+                <Link href="/localisation" className="text-primary-foreground/80 hover:text-accent transition-colors">
                   Nous Trouver
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

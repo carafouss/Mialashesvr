@@ -15,6 +15,8 @@ import SalesManagement from "@/components/admin/sales-management"
 import ReportsManagement from "@/components/admin/reports-management"
 import UsersManagement from "@/components/admin/users-management"
 import HeroManagement from "@/components/admin/hero-management"
+import GalleryManagement from "@/components/admin/gallery-management"
+import PromoVideoManagement from "@/components/admin/promo-video-management"
 import type { AdminUser } from "@/lib/supabase/data-service"
 
 const setAdminLoggedIn = (value: boolean) => {
@@ -79,6 +81,8 @@ export default function AdminDashboard() {
               <TabsTrigger value="products" className="text-xs md:text-sm whitespace-nowrap">Produits</TabsTrigger>
               <TabsTrigger value="categories" className="text-xs md:text-sm whitespace-nowrap">Catégories</TabsTrigger>
               <TabsTrigger value="promos" className="text-xs md:text-sm whitespace-nowrap">Promos</TabsTrigger>
+              <TabsTrigger value="gallery" className="text-xs md:text-sm whitespace-nowrap">Galerie</TabsTrigger>
+              <TabsTrigger value="promo-video" className="text-xs md:text-sm whitespace-nowrap">Vidéo</TabsTrigger>
               {canManageUsers && <TabsTrigger value="users" className="text-xs md:text-sm whitespace-nowrap">Utilisateurs</TabsTrigger>}
             </TabsList>
           </div>
@@ -117,6 +121,14 @@ export default function AdminDashboard() {
 
           <TabsContent value="promos">
             <PromosManagement />
+          </TabsContent>
+
+          <TabsContent value="gallery">
+            <GalleryManagement />
+          </TabsContent>
+
+          <TabsContent value="promo-video">
+            <PromoVideoManagement />
           </TabsContent>
 
           {canManageUsers && (
