@@ -17,7 +17,11 @@ export default function Services() {
   const loadServices = async () => {
     setLoading(true)
     try {
-      const data = await getServices()
+      // Add timeout to prevent infinite loading
+      const timeoutPromise = new Promise<Service[]>((_, reject) => 
+        setTimeout(() => reject(new Error('Timeout')), 5000)
+      )
+      const data = await Promise.race([getServices(), timeoutPromise])
       setServices(data)
     } catch (error) {
       console.error("Error loading services:", error)
