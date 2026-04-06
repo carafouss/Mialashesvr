@@ -24,10 +24,10 @@ export default function LocalisationPage() {
       {/* Location Details */}
       <section className="py-8 pb-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
-            {/* Map - Takes more space */}
-            <div className="lg:col-span-3">
-              <div className="aspect-[4/3] w-full rounded-xl overflow-hidden shadow-lg border border-border">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+            {/* Map - Same width as info column */}
+            <div className="h-full">
+              <div className="h-full min-h-[500px] w-full rounded-xl overflow-hidden shadow-lg border border-border">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.3!2d-3.98!3d5.36!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMjEnMzYuMCJOIDPCsDU4JzQ4LjAiVw!5e0!3m2!1sfr!2sci!4v1234567890"
                   width="100%"
@@ -41,11 +41,11 @@ export default function LocalisationPage() {
               </div>
             </div>
 
-            {/* Contact Info Cards */}
-            <div className="lg:col-span-2 space-y-4">
+            {/* Contact Info Cards - Same width as map */}
+            <div className="flex flex-col gap-4 h-full">
               {/* Adresse */}
-              <Card className="border border-border shadow-sm">
-                <CardContent className="p-6">
+              <Card className="border border-border shadow-sm flex-1">
+                <CardContent className="p-6 h-full flex items-center">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
                       <MapPin className="w-5 h-5 text-white" />
@@ -70,8 +70,8 @@ export default function LocalisationPage() {
               </Card>
 
               {/* Contact */}
-              <Card className="border border-border shadow-sm">
-                <CardContent className="p-6">
+              <Card className="border border-border shadow-sm flex-1">
+                <CardContent className="p-6 h-full flex items-center">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
                       <Phone className="w-5 h-5 text-white" />
@@ -93,8 +93,8 @@ export default function LocalisationPage() {
               </Card>
 
               {/* Horaires */}
-              <Card className="border border-border shadow-sm">
-                <CardContent className="p-6">
+              <Card className="border border-border shadow-sm flex-1">
+                <CardContent className="p-6 h-full flex items-center">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
                       <Clock className="w-5 h-5 text-white" />
