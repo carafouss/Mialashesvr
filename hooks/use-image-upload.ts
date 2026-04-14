@@ -41,12 +41,14 @@ export function useImageUpload() {
   }
 
   const uploadMultipleImages = async (files: File[]): Promise<string[]> => {
+    console.log("[v0] uploadMultipleImages called with", files.length, "files")
     setUploading(true)
     setError(null)
     const uploadedUrls: string[] = []
 
     try {
       for (const file of files) {
+        console.log("[v0] Uploading file:", file.name, file.size, file.type)
         const formData = new FormData()
         formData.append("file", file)
 
@@ -55,15 +57,22 @@ export function useImageUpload() {
           body: formData,
         })
 
+        console.log("[v0] Upload response status:", response.status)
+
         if (!response.ok) {
-          throw new Error(`Upload failed for ${file.name}`)
+          const errorData = await response.json().catch(() => ({}))
+          console.error("[v0] Upload failed:", errorData)
+          throw new Error(`Upload failed for ${file.name}: ${errorData.error || response.status}`)
         }
 
         const result: UploadResult = await response.json()
+        console.log("[v0] Upload result:", result.url)
         uploadedUrls.push(result.url)
       }
+      console.log("[v0] All uploads complete. URLs:", uploadedUrls)
       return uploadedUrls
     } catch (err) {
+      console.error("[v0] Upload error:", err)
       setError(err instanceof Error ? err.message : "Upload failed")
       return uploadedUrls
     } finally {
