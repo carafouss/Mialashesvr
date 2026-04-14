@@ -108,9 +108,19 @@ export default function ProductsManagement() {
     // Upload new images to Vercel Blob
     if (imageFiles.length > 0) {
       const uploadedUrls = await uploadMultipleImages(imageFiles)
-      if (uploadedUrls.length > 0) {
-        allImageUrls = [...allImageUrls, ...uploadedUrls]
+      if (uploadedUrls.length === 0 && imageFiles.length > 0) {
+        alert("Erreur lors de l'upload des images. Veuillez réessayer.")
+        setSaving(false)
+        return
       }
+      allImageUrls = [...allImageUrls, ...uploadedUrls]
+    }
+
+    // Check if we have at least one image for new products
+    if (!editingProduct && allImageUrls.length === 0) {
+      alert("Veuillez ajouter au moins une image pour le produit.")
+      setSaving(false)
+      return
     }
 
     // Use first image as main image, rest in images array
