@@ -1,13 +1,7 @@
 "use client"
 
 import { useState } from "react"
-
-interface UploadResult {
-  url: string
-  filename: string
-  size: number
-  type: string
-}
+import { createClient } from "@/lib/supabase/client"
 
 export function useImageUpload() {
   const [uploading, setUploading] = useState(false)
@@ -18,21 +12,35 @@ export function useImageUpload() {
     setError(null)
 
     try {
-      const formData = new FormData()
-      formData.append("file", file)
+      const supabase = createClient()
+      
+      // Generate unique filename
+      const timestamp = Date.now()
+      const randomId = Math.random().toString(36).substring(7)
+      const extension = file.name.split(".").pop()
+      const filename = `products/${timestamp}-${randomId}.${extension}`
 
-      const response = await fetch("/api/upload", {
-        method: "POST",
-        body: formData,
-      })
+      // Upload to Supabase Storage
+      const { data, error: uploadError } = await supabase.storage
+        .from("images")
+        .upload(filename, file, {
+          cacheControl: "3600",
+          upsert: false,
+        })
 
-      if (!response.ok) {
-        throw new Error("Upload failed")
+      if (uploadError) {
+        console.error("[v0] Supabase upload error:", uploadError)
+        throw new Error(uploadError.message)
       }
 
-      const result: UploadResult = await response.json()
-      return result.url
+      // Get public URL
+      const { data: urlData } = supabase.storage
+        .from("images")
+        .getPublicUrl(data.path)
+
+      return urlData.publicUrl
     } catch (err) {
+      console.error("[v0] Upload error:", err)
       setError(err instanceof Error ? err.message : "Upload failed")
       return null
     } finally {
@@ -47,28 +55,39 @@ export function useImageUpload() {
     const uploadedUrls: string[] = []
 
     try {
+      const supabase = createClient()
+      
       for (const file of files) {
         console.log("[v0] Uploading file:", file.name, file.size, file.type)
-        const formData = new FormData()
-        formData.append("file", file)
+        
+        // Generate unique filename
+        const timestamp = Date.now()
+        const randomId = Math.random().toString(36).substring(7)
+        const extension = file.name.split(".").pop()
+        const filename = `products/${timestamp}-${randomId}.${extension}`
 
-        const response = await fetch("/api/upload", {
-          method: "POST",
-          body: formData,
-        })
+        // Upload to Supabase Storage
+        const { data, error: uploadError } = await supabase.storage
+          .from("images")
+          .upload(filename, file, {
+            cacheControl: "3600",
+            upsert: false,
+          })
 
-        console.log("[v0] Upload response status:", response.status)
-
-        if (!response.ok) {
-          const errorData = await response.json().catch(() => ({}))
-          console.error("[v0] Upload failed:", errorData)
-          throw new Error(`Upload failed for ${file.name}: ${errorData.error || response.status}`)
+        if (uploadError) {
+          console.error("[v0] Supabase upload error:", uploadError)
+          throw new Error(`Upload failed for ${file.name}: ${uploadError.message}`)
         }
 
-        const result: UploadResult = await response.json()
-        console.log("[v0] Upload result:", result.url)
-        uploadedUrls.push(result.url)
+        // Get public URL
+        const { data: urlData } = supabase.storage
+          .from("images")
+          .getPublicUrl(data.path)
+
+        console.log("[v0] Upload result:", urlData.publicUrl)
+        uploadedUrls.push(urlData.publicUrl)
       }
+      
       console.log("[v0] All uploads complete. URLs:", uploadedUrls)
       return uploadedUrls
     } catch (err) {
@@ -82,15 +101,20 @@ export function useImageUpload() {
 
   const deleteImage = async (url: string): Promise<boolean> => {
     try {
-      const response = await fetch("/api/upload/delete", {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ url }),
-      })
+      const supabase = createClient()
+      
+      // Extract path from URL
+      const urlObj = new URL(url)
+      const pathMatch = urlObj.pathname.match(/\/storage\/v1\/object\/public\/images\/(.+)/)
+      if (!pathMatch) return false
+      
+      const filePath = pathMatch[1]
+      
+      const { error } = await supabase.storage
+        .from("images")
+        .remove([filePath])
 
-      return response.ok
+      return !error
     } catch {
       return false
     }
