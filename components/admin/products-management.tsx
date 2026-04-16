@@ -62,30 +62,34 @@ export default function ProductsManagement() {
     }
   }
 
-  const handleImagesChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleImagesChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files
-    if (files) {
-      const newFiles: File[] = []
-      const newPreviews: string[] = []
+    if (!files || files.length === 0) return
 
-      Array.from(files).forEach((file) => {
-        if (file.size > 5 * 1024 * 1024) {
-          alert(`L'image ${file.name} est trop grande. Taille maximale: 5MB`)
-          return
-        }
-        newFiles.push(file)
-        
-        const reader = new FileReader()
-        reader.onloadend = () => {
-          newPreviews.push(reader.result as string)
-          if (newPreviews.length === newFiles.length) {
-            setImageFiles(prev => [...prev, ...newFiles])
-            setImagePreviews(prev => [...prev, ...newPreviews])
-          }
-        }
-        reader.readAsDataURL(file)
-      })
-    }
+    const validFiles: File[] = []
+    
+    // First, filter valid files
+    Array.from(files).forEach((file) => {
+      if (file.size > 5 * 1024 * 1024) {
+        alert(`L'image ${file.name} est trop grande. Taille maximale: 5MB`)
+        return
+      }
+      validFiles.push(file)
+    })
+
+    if (validFiles.length === 0) return
+
+    // Add files to state immediately
+    setImageFiles(prev => [...prev, ...validFiles])
+
+    // Generate previews for each file
+    validFiles.forEach((file) => {
+      const reader = new FileReader()
+      reader.onloadend = () => {
+        setImagePreviews(prev => [...prev, reader.result as string])
+      }
+      reader.readAsDataURL(file)
+    })
   }
 
   const removeImage = (index: number, isExisting: boolean) => {
