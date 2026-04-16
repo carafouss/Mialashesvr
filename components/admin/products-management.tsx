@@ -105,20 +105,29 @@ export default function ProductsManagement() {
     e.preventDefault()
     setSaving(true)
     
+    console.log("[v0] handleSaveProduct called")
+    console.log("[v0] imageFiles count:", imageFiles.length)
+    console.log("[v0] existingImages:", existingImages)
+    
     const formData = new FormData(e.currentTarget)
     
     let allImageUrls: string[] = [...existingImages]
     
     // Upload new images to Vercel Blob
     if (imageFiles.length > 0) {
+      console.log("[v0] Uploading", imageFiles.length, "new images...")
       const uploadedUrls = await uploadMultipleImages(imageFiles)
+      console.log("[v0] Upload result:", uploadedUrls)
+      
       if (uploadedUrls.length === 0 && imageFiles.length > 0) {
-        alert("Erreur lors de l'upload des images. Veuillez réessayer.")
+        alert("Erreur lors de l'upload des images. Veuillez réessayer. Vérifiez la console pour plus de détails.")
         setSaving(false)
         return
       }
       allImageUrls = [...allImageUrls, ...uploadedUrls]
     }
+
+    console.log("[v0] allImageUrls:", allImageUrls)
 
     // Check if we have at least one image for new products
     if (!editingProduct && allImageUrls.length === 0) {
@@ -130,6 +139,9 @@ export default function ProductsManagement() {
     // Use first image as main image, rest in images array
     const mainImage = allImageUrls[0] || editingProduct?.image || ""
     const additionalImages = allImageUrls.slice(1)
+    
+    console.log("[v0] mainImage:", mainImage)
+    console.log("[v0] additionalImages:", additionalImages)
 
     const productData = {
       name: formData.get("name") as string,
