@@ -32,7 +32,9 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/logo.png" alt="Mia Lashes" width={180} height={60} className="h-12 w-auto" priority />
+            <div className="border border-foreground/20 p-2 bg-background/80 backdrop-blur-sm">
+              <Image src="/logo.png" alt="Mia Lashes" width={180} height={60} className="h-10 w-auto" priority />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
