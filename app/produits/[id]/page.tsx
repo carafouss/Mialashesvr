@@ -195,11 +195,14 @@ export default function ProductDetailPage() {
                 {product.name}
               </h1>
 
-              <div className="mb-6 inline-flex items-baseline gap-2 rounded-xl border border-accent/25 bg-accent/10 px-4 py-3">
-                <span className="font-serif text-3xl font-bold tracking-tight text-foreground">
-                  {product.price.toLocaleString("fr-FR")}
+              <div className="mb-6 inline-flex flex-col rounded-md border border-accent/25 bg-accent/[0.04] px-4 py-3">
+                <span className="text-xs font-light tracking-wide text-muted-foreground">À partir de</span>
+                <span className="mt-0.5 inline-flex items-baseline gap-2">
+                  <span className="font-serif text-3xl font-bold tracking-tight text-foreground">
+                    {product.price.toLocaleString("fr-FR")}
+                  </span>
+                  <span className="text-sm font-semibold tracking-wide text-accent">FCFA</span>
                 </span>
-                <span className="text-sm font-semibold tracking-wide text-accent">FCFA</span>
               </div>
 
               <div className="prose prose-gray max-w-none mb-8">

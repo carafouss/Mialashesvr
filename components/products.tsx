@@ -160,8 +160,8 @@ export default function Products() {
                 <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
                 <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{product.description}</p>
                 <div className="mt-4 flex items-end justify-between border-t border-border/70 pt-3">
-                  <div>
-                    <span className="block text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Prix</span>
+                  <div className="rounded-md border border-accent/25 bg-accent/[0.04] px-3 py-2">
+                    <span className="block text-[10px] font-light tracking-wide text-muted-foreground">À partir de</span>
                     <span className="mt-0.5 block font-serif text-xl font-bold tracking-tight text-foreground">
                       {product.price.toLocaleString("fr-FR")} <span className="font-sans text-xs font-semibold tracking-normal text-accent">FCFA</span>
                     </span>
