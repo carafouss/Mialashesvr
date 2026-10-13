@@ -151,9 +151,17 @@ export default function ProduitsPage() {
                     <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
                       {product.description}
                     </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-accent font-bold text-lg">
-                        {product.price.toLocaleString()} FCFA
+                    <div className="flex items-end justify-between gap-3 border-t border-border/70 pt-3">
+                      <div>
+                        <span className="block text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                          Prix
+                        </span>
+                        <span className="mt-0.5 block font-serif text-xl font-bold tracking-tight text-foreground">
+                          {product.price.toLocaleString("fr-FR")} <span className="font-sans text-xs font-semibold tracking-normal text-accent">FCFA</span>
+                        </span>
+                      </div>
+                      <span className="rounded-full bg-accent/10 px-2.5 py-1 text-[10px] font-medium text-accent">
+                        Disponible
                       </span>
                     </div>
                     <div className="flex gap-2 mt-3">
