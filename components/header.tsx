@@ -31,10 +31,25 @@ export default function Header() {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="border border-foreground/20 p-2 bg-background/80 backdrop-blur-sm">
-              <Image src="/ml-logo.jpeg" alt="Mia Lashes" width={128} height={128} className="h-10 w-10 object-contain" priority />
-            </div>
+          <Link
+            href="/"
+            aria-label="Mia Lashes — accueil"
+            className="group relative flex items-center"
+          >
+            <span
+              aria-hidden="true"
+              className="absolute -inset-1 rounded-2xl border border-accent/35 transition-transform duration-300 group-hover:scale-105"
+            />
+            <span className="relative rounded-xl border border-accent/25 bg-white p-1 shadow-[0_6px_20px_rgba(0,0,0,0.12)] ring-1 ring-white/80 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:shadow-[0_10px_26px_rgba(0,0,0,0.16)]">
+              <Image
+                src="/ml-logo.jpeg"
+                alt="Mia Lashes"
+                width={128}
+                height={128}
+                className="h-10 w-10 rounded-lg object-contain md:h-11 md:w-11"
+                priority
+              />
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
