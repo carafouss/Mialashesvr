@@ -195,9 +195,12 @@ export default function ProductDetailPage() {
                 {product.name}
               </h1>
 
-              <p className="text-2xl font-bold text-accent mb-6">
-                {product.price.toLocaleString()} FCFA
-              </p>
+              <div className="mb-6 inline-flex items-baseline gap-2 rounded-xl border border-accent/25 bg-accent/10 px-4 py-3">
+                <span className="font-serif text-3xl font-bold tracking-tight text-foreground">
+                  {product.price.toLocaleString("fr-FR")}
+                </span>
+                <span className="text-sm font-semibold tracking-wide text-accent">FCFA</span>
+              </div>
 
               <div className="prose prose-gray max-w-none mb-8">
                 <p className="text-muted-foreground">

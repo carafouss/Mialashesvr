@@ -159,7 +159,15 @@ export default function Products() {
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
                 <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{product.description}</p>
-                <div className="text-2xl font-bold text-accent">{product.price.toLocaleString()} FCFA</div>
+                <div className="mt-4 flex items-end justify-between border-t border-border/70 pt-3">
+                  <div>
+                    <span className="block text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Prix</span>
+                    <span className="mt-0.5 block font-serif text-xl font-bold tracking-tight text-foreground">
+                      {product.price.toLocaleString("fr-FR")} <span className="font-sans text-xs font-semibold tracking-normal text-accent">FCFA</span>
+                    </span>
+                  </div>
+                  <span className="rounded-full bg-accent/10 px-2.5 py-1 text-[10px] font-medium text-accent">Disponible</span>
+                </div>
               </CardContent>
               <CardFooter className="p-6 pt-0 flex items-center gap-2">
                 <div className="flex items-center border rounded-md">
