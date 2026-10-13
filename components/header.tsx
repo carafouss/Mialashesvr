@@ -33,7 +33,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <div className="border border-foreground/20 p-2 bg-background/80 backdrop-blur-sm">
-              <Image src="/logo.png" alt="Mia Lashes" width={180} height={60} className="h-10 w-auto" priority />
+              <Image src="/ml-logo.jpeg" alt="Mia Lashes" width={128} height={128} className="h-10 w-10 object-contain" priority />
             </div>
           </Link>
 

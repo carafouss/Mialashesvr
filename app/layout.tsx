@@ -14,8 +14,9 @@ export const metadata: Metadata = {
     "Mia Lashes est spécialisée dans la mise en valeur du visage à travers des prestations haut de gamme : extensions de cils, micropigmentation des sourcils et soins du visage.",
   generator: "v0.app",
   icons: {
-    icon: "/favicon.ico",
-    apple: "/logo.png",
+    icon: "/ml-logo.jpeg",
+    shortcut: "/ml-logo.jpeg",
+    apple: "/ml-logo.jpeg",
   },
 }
 
