@@ -99,7 +99,7 @@ export default function ServicesPage() {
                           À partir de
                         </span>
                         <span className="mt-0.5 block font-serif text-xl font-bold tracking-tight text-foreground">
-                          {service.price}
+                          {service.price.replace(/^à partir de\s*/i, "")}
                         </span>
                       </div>
                       <div className="flex gap-2">
