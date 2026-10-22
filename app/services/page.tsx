@@ -93,10 +93,15 @@ export default function ServicesPage() {
                     <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
                       {service.description}
                     </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-accent font-bold text-lg">
-                        {service.price}
-                      </span>
+                    <div className="flex items-end justify-between gap-3 border-t border-border/70 pt-3">
+                      <div className="rounded-md border border-accent/25 bg-accent/[0.04] px-3 py-2">
+                        <span className="block text-[10px] font-light tracking-wide text-muted-foreground">
+                          À partir de
+                        </span>
+                        <span className="mt-0.5 block font-serif text-xl font-bold tracking-tight text-foreground">
+                          {service.price}
+                        </span>
+                      </div>
                       <div className="flex gap-2">
                         <Link href={`/services/${service.id}`}>
                           <Button variant="outline" size="sm">
