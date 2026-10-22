@@ -172,7 +172,13 @@ export default function ServiceDetailPage() {
                 <span className="text-sm font-medium">Prestation</span>
               </div>
               
-              <h1 className="text-3xl md:text-4xl font-serif font-bold mb-4">
+              <div className="mb-4 flex items-center gap-3">
+                <span className="h-px w-10 bg-accent" aria-hidden="true" />
+                <span className="text-xs font-semibold uppercase tracking-[0.24em] text-accent">
+                  Savoir-faire Mia Lashes
+                </span>
+              </div>
+              <h1 className="text-4xl font-serif font-semibold leading-tight tracking-tight md:text-5xl">
                 {service.title}
               </h1>
 
