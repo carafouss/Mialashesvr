@@ -188,7 +188,7 @@ export default function Hero() {
 
       {/* Carousel Indicators */}
       {images.length > 1 && (
-        <div className="absolute bottom-24 md:bottom-28 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+        <div className="absolute bottom-16 md:bottom-20 left-1/2 -translate-x-1/2 z-20 flex gap-2">
           {images.map((_, index) => (
             <button
               key={index}
