@@ -87,16 +87,27 @@ export default function ServicesPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-2 group-hover:text-accent transition-colors">
+                    <div className="mb-3 flex items-center gap-3">
+                      <span className="h-px w-8 bg-accent/70" aria-hidden="true" />
+                      <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-accent">
+                        Savoir-faire
+                      </span>
+                    </div>
+                    <h3 className="font-serif text-2xl font-semibold leading-tight tracking-tight text-foreground transition-colors group-hover:text-accent">
                       {service.title}
                     </h3>
                     <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
                       {service.description}
                     </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-accent font-bold text-lg">
-                        {service.price}
-                      </span>
+                    <div className="flex items-end justify-between gap-3 border-t border-border/70 pt-3">
+                      <div className="rounded-md border border-accent/25 bg-accent/[0.04] px-3 py-2">
+                        <span className="block text-[10px] font-light tracking-wide text-muted-foreground">
+                          À partir de
+                        </span>
+                        <span className="mt-0.5 block font-serif text-xl font-bold tracking-tight text-foreground">
+                          {service.price.replace(/^à partir de\s*/i, "")}
+                        </span>
+                      </div>
                       <div className="flex gap-2">
                         <Link href={`/services/${service.id}`}>
                           <Button variant="outline" size="sm">
